@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Search
+{% endblock %}
+
+{% block main %}
+	<form action="{{ url_for('quote') }}" method="POST">
+		<fieldset>
+			<div class="form-group">
+				<input type="text" name="symbol" class="form-control" autocomplete="off" autofocus placeholder="Symbol e.g. NFLX">
+			</div>
+			<div class="form-group">
+				<button class="btn btn-default" type="Submit">Search</button>
+			</div>
+		</fieldset>
+	</form>
+{% endblock %}
